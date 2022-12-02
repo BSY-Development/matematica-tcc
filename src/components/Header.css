@@ -1,5 +1,5 @@
 #header {
-    background-color: #2A2227;
+    background-color: #0F0E17;
     padding: 30px 20px;
     text-align: left;
 }
@@ -12,5 +12,5 @@
 }
 
 #header a:hover {
-    color: rgb(221, 204, 204);
+    color: rgb(247, 203, 162);
 }

@@ -1,4 +1,7 @@
 import React, { useEffect, useState } from "react";
+import Footer from "../components/Footer";
+import Header from "../components/Header";
+import './SegundoGrau.css';
 
 export default function SegundoGrau() {
     const [primeiroTermo, setPrimeiroTermo] = useState(1)
@@ -40,20 +43,26 @@ export default function SegundoGrau() {
     const { x1, x2 } = calculateX1X2()
     return (
         <div>
-            <h1>Equação de Primeiro Grau</h1>
-            <form>
-                <label htmlFor="ptermo">1º Termo:</label>
-                <input type="number" id="ptermo" name="ptermo" placeholder="1" defaultValue={ 1 } onChange={ (e) => handleChange(e, setPrimeiroTermo) } />
-                <label htmlFor="stermo">2º Termo:</label>
-                <input type="number" id="stermo" name="stermo" placeholder="1" defaultValue={ 1 } onChange={ (e) => handleChange(e, setSegundoTermo) } />
-                <label htmlFor="ttermo">3º Termo:</label>
-                <input type="number" id="ttermo" name="ttermo" placeholder="1" defaultValue={ 1 } onChange={ (e) => handleChange(e, setTerceiroTermo) } />
-            </form>
-            <p>{primeiroTermo}x² + {segundoTermo}x + {terceiroTermo} = 0</p>
-            <p>Δ = { delta }</p>
-            <p hidden={ !numeroImaginario }>Delta negativo, tratando como número imaginário.</p>
-            <p hidden={ numeroImaginario }>x1 = { x1 }</p>
-            <p hidden={ numeroImaginario }>x2 = { x2 }</p>
+            <Header />
+            <div className="page-body-segundo">
+                <div className="card-calculator-second">
+                    <h1>Equação de Segundo Grau</h1>
+                    <form className="form-calculator">
+                        <label htmlFor="ptermo">1º Termo:</label>
+                        <input type="number" id="ptermo" name="ptermo" placeholder="1" defaultValue={ 1 } onChange={ (e) => handleChange(e, setPrimeiroTermo) } />
+                        <label htmlFor="stermo">2º Termo:</label>
+                        <input type="number" id="stermo" name="stermo" placeholder="1" defaultValue={ 1 } onChange={ (e) => handleChange(e, setSegundoTermo) } />
+                        <label htmlFor="ttermo">3º Termo:</label>
+                        <input type="number" id="ttermo" name="ttermo" placeholder="1" defaultValue={ 1 } onChange={ (e) => handleChange(e, setTerceiroTermo) } />
+                    </form>
+                    <p className="text-description-segundo">{primeiroTermo}x² + {segundoTermo}x + {terceiroTermo} = 0</p>
+                    <p className="text-description-segundo">Δ = { delta }</p>
+                    <p className="text-description-segundo" hidden={ !numeroImaginario }>Delta negativo.</p>
+                    <p className="text-description-segundo" hidden={ numeroImaginario }>x1 = { x1 }</p>
+                    <p className="text-description-segundo" hidden={ numeroImaginario }>x2 = { x2 }</p>
+                </div>
+            </div>
+            <Footer />
         </div>
     )
 }
