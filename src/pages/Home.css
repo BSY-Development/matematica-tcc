@@ -1,0 +1,8 @@
+.home-div {
+    min-height: 75vh;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding-top: 9%;
+    justify-content: space-around;
+}

@@ -1,0 +1,16 @@
+#header {
+    background-color: #2A2227;
+    padding: 30px 20px;
+    text-align: left;
+}
+
+#header a {
+    color: white;
+    font-size: 32px;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+#header a:hover {
+    color: rgb(221, 204, 204);
+}
